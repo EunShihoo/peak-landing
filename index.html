@@ -604,10 +604,17 @@
     sections.forEach(s => s.classList.toggle('active', s.id === name));
     window.scrollTo({top:0, behavior:'smooth'});
   }
-
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => setTab(btn.dataset.tab));
   });
+
+  const validTabs = ['place', 'shopping', 'coupang', 'blog'];
+  const requestedTab = new URLSearchParams(window.location.search).get('tab');
+  if (requestedTab && validTabs.includes(requestedTab)) {
+    tabBtns.forEach(b => b.classList.toggle('active', b.dataset.tab === requestedTab));
+    sections.forEach(s => s.classList.toggle('active', s.id === requestedTab));
+  }
+  
 </script>
 
 </body>
