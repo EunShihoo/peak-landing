@@ -3,7 +3,7 @@
 <link rel="icon" type="image/png" href="/assets/fav-brand.png?v=1">
 <link rel="apple-touch-icon" href="/assets/fav-brand.png?v=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>맛집 · 카페 플레이스 순위, 무료로 조회하고 올리세요 | 피크마케팅</title>
+<title>플레이스 · 쇼핑 · 쿠팡 등 다양한 상품 | 피크마케팅</title>
 <meta name="description" content="내 가게 플레이스 순위 무료 조회. 리워드 · 블로그 리뷰 · 기자단 · 카카오맵 · 티맵 · 당근 · 샤오홍슈까지, 손님이 오게 만드는 일을 직접 하는 5년차 마케팅 실행사. 맛집 · 카페 사장님 전문.">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;900&display=swap">
@@ -56,7 +56,6 @@ nav.scrolled { background:rgba(7,12,10,.82); backdrop-filter:blur(14px); border-
 .nav-cta { font-size:14px; font-weight:600; padding:9px 20px; border-radius:999px; border:1px solid rgba(255,255,255,.2); transition:.25s; }
 .nav-cta:hover { background:var(--accent); border-color:var(--accent); color:#06231a; }
 
-/* ══ 01 HERO + 진단 위젯 ══ */
 .hero { position:relative; overflow:hidden; }
 #aurora { position:absolute; inset:0; width:100%; height:100%; }
 .hero::after { content:''; position:absolute; inset:0; pointer-events:none;
@@ -112,245 +111,6 @@ h1 .l1 { display:block; font-family:'Noto Serif KR',Georgia,serif; font-weight:6
 @keyframes mq { to { transform:translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .mq-track { animation:none; } }
 
-.kicker { font-size:13px; font-weight:700; letter-spacing:.22em; color:var(--accent); margin-bottom:18px; }
-.kicker::before { content:''; display:inline-block; width:26px; height:2px; border-radius:2px; background:var(--accent); margin-right:12px; vertical-align:middle; opacity:.9; }
-.sec-head { margin-bottom:52px; }
-.sec-head h2 { font-size:clamp(27px,3.6vw,44px); font-weight:800; letter-spacing:-.025em; line-height:1.35; }
-.sec-head p { color:var(--muted); margin-top:14px; font-size:16.5px; max-width:700px; }
-
-/* ══ 02 진단(예시) ══ */
-.diag { padding:120px 0; background:var(--bg2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.dg-example-tag { display:inline-flex; align-items:center; gap:8px; font-size:12px; font-weight:700; color:var(--peak); background:rgba(242,185,92,.1); border:1px solid rgba(242,185,92,.35); border-radius:999px; padding:5px 14px; margin-bottom:16px; }
-.dg-step { position:relative; background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:32px 34px 28px 78px; margin-bottom:14px; }
-.dg-step .dg-n { position:absolute; left:28px; top:32px; width:32px; height:32px; border-radius:50%; background:rgba(47,191,143,.14); border:1px solid rgba(47,191,143,.4); color:var(--accent2); font-weight:800; font-size:15px; display:flex; align-items:center; justify-content:center; }
-.dg-step h3 { font-family:'Noto Serif KR',Georgia,serif; font-size:clamp(18px,2.2vw,24px); font-weight:900; line-height:1.5; margin-bottom:12px; }
-.dg-step h3 b, .dg-step p b { color:var(--accent2); }
-.dg-step p { color:var(--muted); font-size:15px; }
-.dg-step.gold { background:linear-gradient(160deg, rgba(242,185,92,.1), var(--panel) 55%); border-color:rgba(242,185,92,.4); }
-.dg-step.gold .dg-n { background:rgba(242,185,92,.12); border-color:rgba(242,185,92,.45); color:var(--peak); }
-.dg-bars { display:flex; flex-direction:column; gap:14px; margin:16px 0; }
-.dg-bar-row .lbl { font-size:12.5px; color:var(--dim); margin-bottom:5px; }
-.dg-bar { display:flex; align-items:center; gap:10px; margin-bottom:4px; }
-.dg-bar .who { width:80px; font-size:11px; color:var(--dim); flex:none; text-align:right; }
-.dg-bar .track { flex:1; height:18px; background:#0a120d; border:1px solid rgba(255,255,255,.06); border-radius:9px; overflow:hidden; }
-.dg-bar .fill { display:block; height:100%; border-radius:9px; width:0; transition:width 1.2s cubic-bezier(.2,.7,.2,1); }
-.dg-bar.top .fill { background:#5c6f66; }
-.dg-bar.me .fill { background:linear-gradient(90deg,#2fbf8f,#7ee8c7); }
-.dg-bar.me.bad .fill { background:linear-gradient(90deg,#c96a55,#ff9d8a); }
-.dg-bar .val { width:90px; font-size:12.5px; font-weight:800; font-variant-numeric:tabular-nums; flex:none; }
-.dg-rx { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:14px; }
-.rx { background:#0c1510; border:1px solid rgba(47,191,143,.3); border-radius:14px; padding:18px 16px; }
-.rx .rx-t { font-size:11px; font-weight:800; letter-spacing:.08em; color:var(--peak); margin-bottom:8px; }
-.rx b { display:block; font-size:15.5px; margin-bottom:5px; }
-.rx p { font-size:12.5px; color:var(--muted); }
-.dg-cta-row { margin-top:18px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
-.dg-sub { font-size:12px; color:var(--dim); }
-
-/* 브릿지 (풀스크린 한 문장) */
-.bridge { min-height:72vh; display:flex; align-items:center; justify-content:center; text-align:center; background:var(--bg); padding:90px 24px; }
-.bridge h2 { font-size:clamp(30px,5.5vw,54px); font-weight:800; line-height:1.42; letter-spacing:-.03em; max-width:820px; }
-.bridge h2 small { display:block; font-family:'Noto Serif KR',Georgia,serif; font-weight:600; font-size:.45em; color:var(--muted); margin-top:18px; letter-spacing:0; }
-
-/* 시네마 장면 (자막형) */
-.cine-panel { min-height:92vh; min-height:92svh; display:flex; align-items:center; justify-content:center; text-align:center; background-size:cover; background-position:center; position:relative; }
-.cine-panel::before { content:''; position:absolute; inset:0; background:linear-gradient(rgba(5,8,7,.62), rgba(5,8,7,.78)); }
-.cine-panel.light::before { background:linear-gradient(rgba(5,8,7,.3), rgba(7,12,10,.85) 90%); }
-.cp-inner { position:relative; z-index:1; max-width:680px; padding:0 24px; }
-.cp-tag { display:inline-block; font-size:13px; font-weight:600; letter-spacing:.14em; color:var(--accent2); border:1px solid rgba(126,232,199,.4); border-radius:999px; padding:6px 16px; margin-bottom:24px; background:rgba(7,12,10,.45); backdrop-filter:blur(4px); }
-.cine-panel.light .cp-tag { color:var(--peak); border-color:rgba(242,185,92,.5); }
-.cine-panel h3 { font-family:'Noto Serif KR',Georgia,serif; font-size:clamp(27px,5.2vw,46px); font-weight:900; line-height:1.45; margin-bottom:18px; text-shadow:0 2px 30px rgba(0,0,0,.6); }
-.cine-panel h3 .grad { text-shadow:none; }
-.cine-panel p { color:#d5e5dc; font-size:clamp(14.5px,2vw,17.5px); text-shadow:0 1px 20px rgba(0,0,0,.7); }
-.cine-origin { padding:56px 0; background:var(--bg); }
-
-/* 하단 고정 CTA 바 */
-.stickybar { position:fixed; left:0; right:0; bottom:0; z-index:60; display:flex; align-items:center; gap:12px;
-  padding:10px 16px calc(10px + env(safe-area-inset-bottom)); background:rgba(7,12,10,.92); backdrop-filter:blur(14px);
-  border-top:1px solid var(--line); transform:translateY(110%); transition:transform .45s cubic-bezier(.2,.7,.2,1); }
-.stickybar.show { transform:none; }
-.sb-txt { flex:1; min-width:0; font-size:13.5px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.sb-txt b { color:var(--txt); }
-.sb-btn { flex:none; font-size:14.5px; font-weight:800; padding:12px 22px; border-radius:11px; background:linear-gradient(120deg,#2fbf8f,#1ea076); color:#04150f; box-shadow:0 4px 20px var(--glow); }
-
-/* ══ 03 고민 ══ */
-.pain { padding:120px 0; background:var(--bg); }
-.cards2 { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-bottom:22px; }
-.pcard { background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:30px 28px; }
-.pcard .q { font-family:'Noto Serif KR',Georgia,serif; font-size:19px; font-weight:900; line-height:1.55; margin-bottom:10px; }
-.pcard p { color:var(--muted); font-size:14.5px; }
-.pcard p b { color:var(--accent2); font-weight:700; }
-.pain-origin { display:flex; align-items:center; gap:16px; flex-wrap:wrap; background:linear-gradient(120deg, rgba(47,191,143,.1), rgba(47,191,143,.02)); border:1px solid rgba(47,191,143,.25); border-radius:16px; padding:22px 28px; font-size:15.5px; }
-.pain-origin b { color:var(--accent2); }
-
-/* ══ 04 왜 우리 ══ */
-.reveal { padding:120px 0; background:var(--bg2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.reveal-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:52px; align-items:center; }
-.reveal-copy h3 { font-family:'Noto Serif KR',Georgia,serif; font-size:clamp(20px,2.5vw,27px); font-weight:900; line-height:1.55; margin-bottom:16px; }
-.reveal-copy h3 b { color:var(--accent2); }
-.reveal-copy p { color:var(--muted); font-size:15.5px; margin-bottom:14px; }
-.reveal-copy p b { color:var(--txt); font-weight:600; }
-.reveal-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin:22px 0 16px; }
-.rf { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 10px; text-align:center; font-size:12px; color:var(--muted); }
-.rf b { display:block; width:24px; height:24px; margin:0 auto 8px; border-radius:50%; background:rgba(47,191,143,.15); color:var(--accent2); font-size:12px; font-weight:800; line-height:24px; }
-.rf.gold b { background:rgba(242,185,92,.14); color:var(--peak); }
-.reveal-cap { font-size:12.5px; color:var(--dim); }
-.mission-phone { background:#101b15; border:1px solid rgba(255,255,255,.12); border-radius:26px; padding:24px 18px 16px; box-shadow:0 30px 90px rgba(0,0,0,.55); max-width:400px; margin:0 auto; }
-.mp-head { text-align:center; margin-bottom:16px; }
-.mp-time { font-size:11px; color:var(--dim); margin-bottom:10px; }
-.mp-title { font-size:19px; font-weight:800; }
-.mp-sub { font-size:12.5px; color:var(--muted); }
-.mp-progress { display:inline-block; margin-top:10px; font-size:12px; font-weight:700; color:var(--accent2); background:rgba(47,191,143,.12); border:1px solid rgba(47,191,143,.3); border-radius:999px; padding:4px 14px; }
-.mp-list { display:flex; flex-direction:column; gap:8px; }
-.mp-item { display:flex; align-items:center; gap:12px; background:#0c1510; border:1px solid rgba(255,255,255,.07); border-radius:13px; padding:13px 14px; transition:.4s; }
-.mp-item .mi-ico { width:36px; height:36px; border-radius:10px; background:#131f18; display:flex; align-items:center; justify-content:center; flex:none; }
-.mp-item b { display:block; font-size:14px; }
-.mp-item span { font-size:11px; color:var(--dim); }
-.mp-item .mi-p { margin-left:auto; font-size:13px; font-weight:800; color:var(--peak); white-space:nowrap; }
-.mp-item.done { background:linear-gradient(120deg, rgba(47,191,143,.16), #0c1510 70%); border-color:rgba(47,191,143,.5); }
-.mp-item.done .mi-p { color:var(--accent2); }
-.mp-item.done .mi-p::after { content:' ✓'; }
-.mp-cap { text-align:center; font-size:11px; color:var(--dim); margin-top:12px; }
-.ico svg, .mi-ico svg, .vi svg { width:22px; height:22px; stroke:var(--accent2); fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; display:block; }
-.mi-ico svg { width:18px; height:18px; }
-
-/* 실물 캡처 갤러리 */
-.shot-strip { position:relative; }
-.shot-track { display:flex; gap:14px; overflow-x:auto; padding:4px 4px 14px; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; }
-.shot { flex:0 0 auto; width:min(680px, 88vw); scroll-snap-align:start; border:1px solid rgba(255,255,255,.14); border-radius:14px; overflow:hidden; background:#fff; box-shadow:0 16px 50px rgba(0,0,0,.45); }
-.shot img { display:block; width:100%; height:auto; }
-.shot-hint { text-align:center; font-size:12px; color:var(--dim); margin-top:6px; }
-@media (max-width:640px) { .shot { width:160vw; } }
-
-/* 실증 순위 트래커 */
-.track-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; }
-.tk { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px 18px 14px; }
-.tk-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
-.tk-cat { font-size:14px; font-weight:800; }
-.tk-cat::before { content:''; display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent); margin-right:8px; }
-.tk-vol { font-size:11.5px; color:var(--peak); font-weight:700; }
-.tk-days { display:flex; gap:4px; overflow-x:auto; padding-bottom:6px; }
-.tk-d { flex:1; min-width:44px; text-align:center; background:#0c1510; border:1px solid rgba(255,255,255,.06); border-radius:8px; padding:6px 2px; }
-.tk-d b { display:block; font-size:8.5px; color:var(--dim); font-weight:600; margin-bottom:3px; }
-.tk-d i { font-style:normal; font-size:12px; font-weight:800; font-variant-numeric:tabular-nums; }
-.tk-d i.good { color:var(--accent2); }
-.tk-d i.mid { color:#d8c98a; }
-.tk-d i.bad { color:#ff9d8a; }
-.tk-d.now { border-color:rgba(47,191,143,.5); background:rgba(47,191,143,.1); }
-.tk-sum { margin-top:8px; font-size:12.5px; color:var(--muted); text-align:right; }
-.tk-sum b { color:var(--accent2); font-size:14px; }
-.track-note { margin-top:18px; text-align:center; font-size:14.5px; color:var(--muted); }
-
-/* 보고 메시지 UI */
-.kchat-wrap { max-width:480px; margin:44px auto 0; }
-.kchat-label { text-align:center; font-size:14px; font-weight:800; color:var(--accent2); margin-bottom:14px; }
-.kchat { background:#0b1410; border:1px solid rgba(255,255,255,.1); border-radius:22px; padding:18px 16px 20px; box-shadow:0 24px 70px rgba(0,0,0,.5); }
-.kc-head { display:flex; align-items:center; gap:11px; padding-bottom:14px; border-bottom:1px solid var(--line); margin-bottom:14px; }
-.kc-avatar { width:38px; height:38px; border-radius:13px; background:linear-gradient(135deg,#2fbf8f,#1ea076); color:#04150f; font-weight:900; font-size:17px; display:flex; align-items:center; justify-content:center; }
-.kc-head b { display:block; font-size:14px; }
-.kc-head span { font-size:11px; color:var(--dim); }
-.kc-date { text-align:center; font-size:10.5px; color:var(--dim); background:rgba(255,255,255,.05); border-radius:999px; padding:3px 12px; width:fit-content; margin:0 auto 12px; }
-.kc-row { display:flex; align-items:flex-end; gap:6px; margin-bottom:9px; }
-.kc-row.me { flex-direction:row; justify-content:flex-end; }
-.kc-bubble { max-width:78%; background:#15211a; border:1px solid rgba(255,255,255,.07); border-radius:4px 16px 16px 16px; padding:11px 14px; font-size:13.5px; line-height:1.65; color:#dcebe3; }
-.kc-bubble b { color:var(--accent2); }
-.kc-row.me .kc-bubble { background:rgba(47,191,143,.18); border-color:rgba(47,191,143,.35); border-radius:16px 4px 16px 16px; }
-.kc-time { font-size:9.5px; color:var(--dim); flex:none; }
-.kc-file { display:flex; align-items:center; gap:8px; background:#0c1510; border:1px solid rgba(47,191,143,.3); border-radius:10px; padding:8px 11px; margin-top:9px; font-size:12px; font-weight:700; color:var(--accent2); }
-.kc-fico { font-size:15px; }
-.kchat-cap { text-align:center; font-size:11px; color:var(--dim); margin-top:12px; }
-.pending { display:none; }
-
-/* ══ 05 강점 ══ */
-.strength { padding:120px 0; background:var(--bg); }
-.cmp-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:18px; background:var(--panel); margin-bottom:44px; }
-table.cmp { width:100%; border-collapse:collapse; min-width:640px; font-size:15px; }
-.cmp th { padding:16px 20px; text-align:left; font-size:13px; letter-spacing:.04em; color:var(--dim); border-bottom:1px solid var(--line); }
-.cmp th.us { color:var(--accent2); background:rgba(47,191,143,.07); }
-.cmp td { padding:15px 20px; border-bottom:1px solid var(--line); color:var(--muted); vertical-align:top; }
-.cmp tr:last-child td { border-bottom:none; }
-.cmp td.lbl { font-weight:700; color:var(--txt); white-space:nowrap; width:130px; }
-.cmp td.us { background:rgba(47,191,143,.07); color:#dff5eb; font-weight:600; }
-.cmp td.us b { color:var(--accent2); }
-.pf3 { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.inf { background:var(--panel); border:1px solid var(--line); border-radius:16px; overflow:hidden; transition:.3s; }
-.inf:hover { border-color:rgba(47,191,143,.4); transform:translateY(-3px); }
-.inf img { width:100%; height:150px; object-fit:cover; object-position:top; display:block; border-bottom:1px solid var(--line); }
-.inf .bd { padding:20px 22px; }
-.inf .domain { font-size:12px; color:var(--dim); margin-bottom:8px; }
-.inf h4 { font-size:16.5px; font-weight:800; margin-bottom:4px; }
-.inf p { font-size:13.5px; color:var(--muted); }
-
-/* ══ 06 상품 ══ */
-.products { padding:120px 0; background:var(--bg2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-.prod-group { margin-bottom:34px; }
-.pg-label { display:flex; align-items:center; gap:10px; font-size:14px; font-weight:800; color:var(--accent2); letter-spacing:.04em; margin-bottom:12px; }
-.pg-label::after { content:''; flex:1; height:1px; background:var(--line); }
-.prod-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
-.prod-grid.g2 { grid-template-columns:repeat(2,1fr); }
-.pd { background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:22px 20px; transition:.3s; }
-.pd:hover { border-color:rgba(47,191,143,.45); transform:translateY(-3px); }
-.pd .vi { margin-bottom:12px; }
-.pd .vi svg { stroke:var(--accent); }
-.pd b { display:block; font-size:15.5px; margin-bottom:5px; }
-.pd p { font-size:12.5px; color:var(--muted); }
-.pd .tag { display:inline-block; font-size:10px; font-weight:800; letter-spacing:.08em; color:var(--peak); background:rgba(242,185,92,.1); border:1px solid rgba(242,185,92,.35); border-radius:999px; padding:2px 9px; margin-bottom:10px; }
-.prod-note { margin-top:24px; text-align:center; color:var(--muted); font-size:15px; }
-.prod-note b { color:var(--accent2); }
-
-/* 패키지 */
-.pkg-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; align-items:start; }
-.pkg-price { font-size:21px; font-weight:900; color:var(--accent2); margin-bottom:8px; }
-@media (max-width:960px) { .pkg-grid { grid-template-columns:repeat(2,1fr); } }
-.pkg { background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:30px 26px; position:relative; transition:.3s; }
-.pkg:hover { border-color:rgba(47,191,143,.45); transform:translateY(-4px); }
-.pkg.pop { background:linear-gradient(160deg, rgba(47,191,143,.14), var(--panel) 55%); border-color:rgba(47,191,143,.6); }
-.pkg-tag { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:linear-gradient(120deg,#2fbf8f,#1ea076); color:#04150f; font-size:11.5px; font-weight:800; letter-spacing:.05em; padding:4px 15px; border-radius:999px; white-space:nowrap; }
-.pkg-name { font-size:21px; font-weight:800; margin-bottom:6px; display:flex; align-items:center; gap:10px; }
-.pkg-name em { font-style:normal; width:34px; height:34px; border-radius:11px; background:rgba(47,191,143,.14); border:1px solid rgba(47,191,143,.4); color:var(--accent2); font-size:16px; font-weight:900; display:flex; align-items:center; justify-content:center; }
-.pkg-for { font-size:13px; color:var(--dim); padding-bottom:14px; border-bottom:1px solid var(--line); margin-bottom:14px; }
-.pkg ul { list-style:none; }
-.pkg li { font-size:13.5px; color:var(--muted); padding:7px 0 7px 22px; position:relative; }
-.pkg li::before { content:'✓'; position:absolute; left:0; color:var(--accent); font-size:12px; }
-.pkg li b { color:var(--txt); }
-.pkg.rec-glow { border-color:rgba(242,185,92,.65); box-shadow:0 0 0 1px rgba(242,185,92,.4), 0 14px 50px rgba(242,185,92,.12); }
-.pkg .rec-badge { display:none; position:absolute; top:-12px; right:14px; background:linear-gradient(120deg,#e8c98a,#f2b95c); color:#241a08; font-size:11px; font-weight:800; padding:4px 13px; border-radius:999px; }
-.pkg.rec-glow .rec-badge { display:block; }
-.pkg.rec-glow .pkg-tag { display:none; }
-.pkg-addon { margin-top:18px; display:flex; align-items:center; gap:14px; flex-wrap:wrap; background:linear-gradient(120deg, rgba(242,185,92,.09), rgba(242,185,92,.02)); border:1px dashed rgba(242,185,92,.4); border-radius:14px; padding:18px 24px; }
-.pkg-addon b { font-size:15px; color:var(--peak); }
-.pkg-addon span { font-size:13px; color:var(--muted); flex:1; min-width:220px; }
-
-/* ══ 07 문의 ══ */
-.faq-mini { padding:110px 0 40px; background:var(--bg); }
-.faq-list { max-width:820px; }
-.faq-item { border:1px solid var(--line); border-radius:14px; background:var(--panel); margin-bottom:10px; overflow:hidden; }
-.faq-item summary { list-style:none; cursor:pointer; padding:19px 24px; font-size:16px; font-weight:700; display:flex; justify-content:space-between; align-items:center; gap:14px; }
-.faq-item summary::-webkit-details-marker { display:none; }
-.faq-item summary::after { content:'+'; font-size:22px; font-weight:300; color:var(--accent); transition:transform .3s; flex:none; }
-.faq-item[open] summary::after { transform:rotate(45deg); }
-.faq-item .a { padding:0 24px 20px; color:var(--muted); font-size:14.5px; }
-.faq-item .a b { color:var(--txt); font-weight:600; }
-.contact { padding:60px 0 110px; background:var(--bg); position:relative; overflow:hidden; }
-.contact::before { content:''; position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:900px; height:500px; border-radius:50%; background:radial-gradient(ellipse, rgba(47,191,143,.1), transparent 65%); pointer-events:none; }
-.form-shell { position:relative; max-width:660px; margin:0 auto; padding:0 20px; }
-.form-head { text-align:center; margin-bottom:40px; }
-.form-head h2 { font-size:clamp(27px,3.6vw,42px); font-weight:800; line-height:1.35; }
-.form-head p { color:var(--muted); margin-top:12px; font-size:15.5px; }
-form.lead { background:var(--panel); border:1px solid var(--line); border-radius:24px; padding:42px 40px; }
-.field { margin-bottom:18px; }
-.field label { display:block; font-size:13.5px; font-weight:600; color:var(--muted); margin-bottom:8px; }
-.field input, .field select, .field textarea { width:100%; background:#0a110d; border:1px solid rgba(255,255,255,.12); color:var(--txt); border-radius:12px; padding:14px 16px; font-size:16px; font-family:inherit; transition:.2s; }
-.field input:focus, .field textarea:focus, .field select:focus { outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(47,191,143,.18); }
-.field ::placeholder { color:#4d5c54; }
-.agree { display:flex; gap:10px; align-items:flex-start; font-size:12px; color:var(--dim); margin:6px 0 18px; }
-.agree a { color:var(--muted); text-decoration:underline; }
-.btn-submit { width:100%; justify-content:center; }
-.hp { position:absolute; left:-9999px; opacity:0; height:0; overflow:hidden; }
-.done { display:none; text-align:center; background:var(--panel); border:1px solid rgba(47,191,143,.4); border-radius:24px; padding:60px 30px; }
-.done .big { font-size:44px; margin-bottom:12px; }
-.done h3 { font-size:21px; margin-bottom:6px; }
-.done p { color:var(--muted); }
-
 footer { padding:40px 0 50px; border-top:1px solid var(--line); background:var(--bg); }
 footer .wrap { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
 footer .l { font-size:13px; color:var(--dim); }
@@ -359,58 +119,16 @@ footer a { color:var(--dim); font-size:13px; }
 
 @media (max-width:960px) {
   .hero-inner { grid-template-columns:1fr; gap:40px; padding:110px 0 30px; }
-  .reveal-grid { grid-template-columns:1fr; gap:36px; }
-  .cards2 { grid-template-columns:1fr; }
-  .pf3 { grid-template-columns:1fr; }
-  .prod-grid { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:640px) {
   nav { padding:14px 20px; }
   .wrap { padding:0 16px; }
-  .sec-head { margin-bottom:30px; }
-  .sec-head h2 { font-size:24px; }
-  .sec-head p { font-size:14px; }
   .hero-foot { display:grid; grid-template-columns:repeat(2,1fr); gap:20px 12px; padding:32px 0 44px; }
   .hf-item b { font-size:21px; }
   .hf-item { font-size:10.5px; }
   .hf-phone { padding:20px 16px 14px; }
   .mq-track span { font-size:26px; }
   .marquee { padding:16px 0; }
-  .diag, .pain, .reveal, .strength, .products { padding:66px 0; }
-  .faq-mini { padding:60px 0 20px; }
-  .contact { padding:30px 0 70px; }
-  .dg-step { padding:22px 18px 20px 56px; }
-  .dg-step .dg-n { left:14px; top:22px; width:28px; height:28px; font-size:13px; }
-  .dg-rx { grid-template-columns:1fr; }
-  .dg-bar .who { width:64px; font-size:9.5px; }
-  .dg-bar .val { width:74px; font-size:11px; }
-  .pcard { padding:20px 18px; }
-  .pcard .q { font-size:15px; }
-  .pcard p { font-size:12px; }
-  .pain-origin { padding:16px 18px; font-size:13px; }
-  .reveal-flow { gap:5px; }
-  .rf { padding:10px 4px; font-size:9.5px; }
-  .prod-grid { grid-template-columns:repeat(2,1fr); gap:8px; }
-  .pd { padding:15px 13px; }
-  .pd b { font-size:13px; }
-  .pd p { font-size:10.5px; }
-  .track-grid { grid-template-columns:1fr; gap:8px; }
-  .tk { padding:13px 12px 10px; }
-  .tk-cat { font-size:12.5px; }
-  .tk-vol { font-size:9.5px; }
-  .tk-d { min-width:40px; }
-  .pkg-grid { grid-template-columns:1fr; gap:16px; }
-  .pkg { padding:22px 18px; }
-  .pkg-name { font-size:18px; }
-  .pkg li { font-size:12px; }
-  .pkg-addon { padding:14px 16px; }
-  .faq-item summary { padding:15px 16px; font-size:14px; }
-  .faq-item .a { padding:0 16px 16px; font-size:12.5px; }
-  form.lead { padding:26px 18px; }
-  .form-shell { padding:0 16px; }
-  .field { margin-bottom:14px; }
-  .field input, .field textarea, .field select { padding:11px 13px; font-size:15px; }
-  .btn-submit { font-size:15px; padding:15px 20px; }
 }
 </style>
 <style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swa"></head>
@@ -419,10 +137,9 @@ footer a { color:var(--dim); font-size:13px; }
 <div class="cursor" id="cursor"></div>
 <nav id="nav" class="scrolled">
   <div class="logo">PEAK<b>·</b>MARKETING</div>
-  <a href="#contact" class="nav-cta">무료 진단 신청</a>
+  <a href="#heroForm" class="nav-cta">무료 진단 신청</a>
 </nav>
 
-<!-- ══ 01 히어로 + 접수 폼 ══ -->
 <section class="hero">
   <canvas id="aurora" width="1234" height="716"></canvas>
   <div class="wrap hero-inner">
@@ -485,330 +202,6 @@ footer a { color:var(--dim); font-size:13px; }
   </div>
 </div>
 
-<section class="bridge">
-  <h2 class="rv">손님은 위에서부터 <br><span class="grad">딱 세 개</span>만 봅니다.<small>4위부터는, 없는 가게나 마찬가지입니다.</small></h2>
-</section>
-
-<section class="cine">
-<div class="cine-panel" style="background-image:url('/assets/cine-1b.webp')">
-    <div class="cp-inner rv">
-      <span class="cp-tag">밤 11시, 마감한 주방에서</span>
-      <h3>"음식엔 자신 있습니다."</h3>
-      <p>매일 새벽 장을 보고, 육수를 내고. <br>정성만큼은 누구에게도 지지 않습니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 02 부족점 파악(예시 진단) ══ -->
-<section class="diag" id="diagStory">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker">01 · 무엇이 부족한지부터</div>
-      <h2>잘되는 가게와 내 가게, <br>뭐가 다른 걸까요?</h2>
-      <p>아래는 실제 가게를 진단해 만든 예시입니다. <br>무료 진단을 신청하시면, 사장님 가게에 맞는 진단 리포트를 보내드립니다.</p>
-    </div>
-    <div class="dg-example-tag rv" style="display: inline-flex;">예시 진단</div>
-
-    <div class="dg-step rv">
-      <span class="dg-n">1</span>
-      <h3>한 달에 <b>600명</b>이 이 키워드를 검색합니다.</h3>
-      <p>그런데 하잇테코이은(는) 46위 — 검색한 손님 대부분은 여기까지 내려오지 않습니다. 한 달 600번의 기회가 상위권 가게들에게 흘러가고 있습니다.</p>
-    </div>
-
-    <div class="dg-step rv">
-      <span class="dg-n">2</span>
-      <h3>1페이지 가게들과 내 가게의 차이</h3>
-      <div class="dg-bars">
-        <div class="dg-bar-row"><div class="lbl">방문자 리뷰</div><div class="dg-bar top"><span class="who">1페이지 평균</span><span class="track"><span class="fill" style="width: 100%;"></span></span><span class="val">1,808</span></div><div class="dg-bar me bad"><span class="who">내 가게</span><span class="track"><span class="fill" style="width: 61.17%;"></span></span><span class="val">1,106 (−702)</span></div></div>
-        <div class="dg-bar-row"><div class="lbl">블로그 리뷰</div><div class="dg-bar top"><span class="who">1페이지 평균</span><span class="track"><span class="fill" style="width: 58.08%;"></span></span><span class="val">417</span></div><div class="dg-bar me"><span class="who">내 가게</span><span class="track"><span class="fill" style="width: 100%;"></span></span><span class="val">718</span></div></div>
-      </div>
-      <p>1페이지 평균까지 <b>방문 리뷰 702개</b>가 부족합니다. 저장(찜)은 현재 <b>2,000건</b> — 저장 · 알림 · 길찾기는 순위를 밀어 올리는 힘인데, 사장님이 혼자 만들 수 없는 부분입니다.</p>
-    </div>
-
-    <div class="dg-step rv">
-      <span class="dg-n">3</span>
-      <h3>그래서, 지금 필요한 것</h3>
-      <div class="dg-rx">
-        <div class="rx"><div class="rx-t">필요한 것 1</div><b>플레이스 리워드</b><p>실제 사용자들이 가게를 검색하고 저장하고 찾아오게 만들어, 방문 흔적이 쌓이게 합니다.</p></div>
-        <div class="rx"><div class="rx-t">필요한 것 2</div><b>SEO 점검 + 순위 관리</b><p>가게 정보를 검색에 잘 잡히게 다듬고, 순위 변화를 매달 데이터로 관리합니다.</p></div>
-      </div>
-      <div class="dg-pkg" style="margin-top:18px; background:linear-gradient(140deg, rgba(242,185,92,.12), #0c1510 60%); border:1px solid rgba(242,185,92,.45); border-radius:16px; padding:20px 22px;">
-        <div style="font-size:11.5px; font-weight:800; letter-spacing:.08em; color:var(--peak); margin-bottom:6px;">이 가게에 맞는 패키지</div>
-        <div style="font-family:'Noto Serif KR',Georgia,serif; font-size:20px; font-weight:900; margin-bottom:6px;">네이버 풀케어 (월 49만)</div>
-        <div style="font-size:13.5px; color:var(--muted); margin-bottom:12px;">방문 리뷰가 기준선보다 부족합니다. 리워드로 방문을 만들고, 리뷰까지 같이 채우는 구성이 맞습니다.</div>
-        <a href="#packages" style="font-size:13px; font-weight:700; color:var(--accent2); text-decoration:underline;">패키지 구성 자세히 보기 ↓</a>
-      </div>
-    </div>
-
-    <div class="dg-step gold rv">
-      <span class="dg-n">4</span>
-      <h3>이걸 해드리는 게 저희 일입니다</h3>
-      <p>부족한 것만 골라서, 매장에 맞게 묶어서 제안드립니다. <b>리뷰도 저장도 방문도 직접 만들 수 있는 회사</b>라 가능한 방식입니다.</p>
-      <div class="dg-cta-row">
-        <a class="cta" href="#contact">이 진단 그대로 무료 상담받기 →</a>
-        <span class="dg-sub">신청 시 사장님 가게에 맞는 진단으로 다시 정리해 연락드립니다</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cine">
-<div class="cine-panel" style="background-image:url('/assets/cine-2b.webp')">
-    <div class="cp-inner rv">
-      <span class="cp-tag">금요일 저녁, 옆집은</span>
-      <h3>"그런데 왜 옆집만 <br>바글바글할까요."</h3>
-      <p>이제 아시겠죠. 맛의 차이가 아니라 <br>방금 보신 그 숫자들의 차이입니다.</p>
-    </div>
-  </div>
-</section>
-<section class="cine-origin">
-  <div class="wrap">
-    <div class="pain-origin rv">
-      저희가 이 마음을 아는 이유 — <b>피크마케팅 대표도 온라인 쇼핑몰을 하던 셀러 출신</b>이고, 멤버 대부분이 자기 장사를 해본 사장님 출신입니다. 광고비 내며 속 태워본 쪽이었습니다.
-    </div>
-  </div>
-</section>
-
-<!-- ══ 04 왜 우리 ══ -->
-<section class="reveal">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker">03 · 왜 저희인가</div>
-      <h2>다른 업체가 돈 주고 사 오는 것을, <br><span class="grad">저희는 직접 만듭니다.</span></h2>
-      <p>리워드 마케팅이 뭔지 말로 설명하는 업체는 많습니다. <br>저희는 실물을 보여드립니다 — 저희가 직접 운영하는 리워드 플랫폼입니다.</p>
-    </div>
-    <div class="reveal-grid">
-      <div class="reveal-copy rv">
-        <h3>사장님 가게가 <b>전국 리워드 앱 사용자의 미션</b>이 됩니다.</h3>
-        <p>사장님 가게를 미션으로 올리면, 전국의 리워드 앱 사용자들에게 전달됩니다. 사용자는 포인트를 받기 위해 <b>키워드를 검색하고 → 사장님 가게를 찾아 → 저장하고, 알림을 켜고, 길찾기를 누릅니다.</b></p>
-        <p>네이버 입장에서는 실제 사용자가 검색해서 찾아온 진짜 기록입니다. 이게 매일, 정해진 만큼, 꾸준히 쌓입니다.</p>
-        <div class="reveal-flow">
-          <div class="rf"><b>1</b>미션 등록</div>
-          <div class="rf"><b>2</b>전국 사용자 전달</div>
-          <div class="rf"><b>3</b>검색 · 저장 · 길찾기</div>
-          <div class="rf gold"><b>4</b>매일 쌓이고, 매일 보고</div>
-        </div>
-        <p class="reveal-cap">옆 미션 화면은 저희가 운영하는 리워드스페이스의 실제 구성입니다.</p>
-      </div>
-      <div class="mission-phone rv">
-        <div class="mp-head">
-          <div class="mp-time">10:26</div>
-          <div class="mp-title">오늘의 리워드</div>
-          <div class="mp-sub">미션에 참여해보세요</div>
-          <div class="mp-progress">미션 <span id="mDone">4</span>/4 완료</div>
-        </div>
-        <div class="mp-list" id="missionList">
-          <div class="mp-item done"><div class="mi-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div><div><b>플레이스 방문하기</b><span>키워드 검색 미션</span></div><div class="mi-p">+80P</div></div>
-          <div class="mp-item done"><div class="mi-ico"><svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg></div><div><b>플레이스 저장하기</b><span>저장 참여 미션</span></div><div class="mi-p">+50P</div></div>
-          <div class="mp-item done"><div class="mi-ico"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div><div><b>스토어 상품 찾기</b><span>상품 검색 미션</span></div><div class="mi-p">+40P</div></div>
-          <div class="mp-item done"><div class="mi-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div><b>새로운 장소 발견하기</b><span>방문 참여 미션</span></div><div class="mi-p">+60P</div></div>
-        </div>
-        <div class="mp-cap">리워드스페이스 실제 미션 구성 (rewardspace.kr)</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 05 강점 ══ -->
-<section class="strength">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker">04 · 지금 이 순간에도</div>
-      <h2>말이 아니라, <br>지금 관리 중인 가게들입니다.</h2>
-      <p>자체 순위 추적 시스템의 <b style="color:var(--accent2)">실제 캡처 화면</b>입니다. 상호와 링크는 고객 보호를 위해 가렸습니다.</p>
-    </div>
-    <div class="shot-strip rv">
-      <div class="shot-track">
-        <div class="shot"><img src="/assets/track-2.webp" alt="순위 추적 실제 화면 - 1위 유지 고객들" loading="lazy"></div>
-        <div class="shot"><img src="/assets/track-4.webp" alt="순위 추적 실제 화면 - 카페·사진관 1위" loading="lazy"></div>
-        <div class="shot"><img src="/assets/track-1.webp" alt="순위 추적 실제 화면 - 정형외과·맛집" loading="lazy"></div>
-        <div class="shot"><img src="/assets/track-6.webp" alt="순위 추적 실제 화면 - 맛집 14위에서 1위" loading="lazy"></div>
-        <div class="shot"><img src="/assets/track-5.webp" alt="순위 추적 실제 화면" loading="lazy"></div>
-        <div class="shot"><img src="/assets/track-3.webp" alt="순위 추적 실제 화면" loading="lazy"></div>
-      </div>
-      <div class="shot-hint">← 옆으로 넘겨보세요 · 날짜별 순위가 그대로 기록되어 있습니다</div>
-    </div>
-    <div class="track-note rv">저장 · 리뷰 · 방문이 쌓이면 순위는 이렇게 움직입니다. 다음 자리는 사장님 가게일 수 있습니다.</div>
-
-    <div class="kchat-wrap rv">
-      <div class="kchat-label">그리고, 매일 이렇게 보고받습니다</div>
-      <div class="kchat">
-        <div class="kc-head">
-          <div class="kc-avatar">P</div>
-          <div><b>담당 매니저 · 피크마케팅</b><span>보고 전용 채팅방</span></div>
-        </div>
-        <div class="kc-date">8월 14일 목요일</div>
-        <div class="kc-row">
-          <div class="kc-bubble">사장님, 오늘 자 순위 보고드립니다. <br><b>'●● 맛집' 33위 → 1위 진입했습니다</b> 🎉 <br>위 추적 화면 그대로입니다.</div>
-          <span class="kc-time">오전 9:12</span>
-        </div>
-        <div class="kc-row">
-          <div class="kc-bubble">이번 주 진행한 블로그 리뷰 게시 링크와 <br>리워드 진행 수량은 리포트로 정리해 보내드려요.
-            <div class="kc-file"><span class="kc-fico">📄</span>주간 리포트 · 게시 링크 포함</div>
-          </div>
-          <span class="kc-time">오전 9:13</span>
-        </div>
-        <div class="kc-row me pending">
-          <span class="kc-time">오전 9:20</span>
-          <div class="kc-bubble">(고객 실제 답장 자리)</div>
-        </div>
-        <div class="kc-row">
-          <div class="kc-bubble">다음 주는 '●● 카페' 키워드 확장을 제안드리려고 합니다. 통화 가능하신 시간 알려주세요 🙂</div>
-          <span class="kc-time">오전 9:14</span>
-        </div>
-      </div>
-      <div class="kchat-cap">담당 매니저가 실제로 보내는 보고 메시지 형식입니다 · 순위는 위 추적 화면의 실제 데이터</div>
-    </div>
-
-    <div class="sec-head rv" style="margin-top:80px">
-      <div class="kicker">05 · 다른 점</div>
-      <h2>리워드 업체는 많습니다. <br>직접 만드는 곳은 드뭅니다.</h2>
-    </div>
-    <div class="cmp-wrap rv">
-      <table class="cmp">
-        <thead><tr><th></th><th>일반 대행사</th><th class="us">피크마케팅</th></tr></thead>
-        <tbody>
-          <tr><td class="lbl">리워드</td><td>외부에서 사 와서 마진을 붙여 판매</td><td class="us"><b>자체 플랫폼(리워드스페이스) 직영</b> — 같은 예산에 더 많이</td></tr>
-          <tr><td class="lbl">블로그 리뷰</td><td>외주 체험단, 글이 올라갔는지 확인 어려움</td><td class="us"><b>자체 기자단 풀</b> — 섭외 · 검수 직접, 게시 링크 전부 증빙</td></tr>
-          <tr><td class="lbl">순위 확인</td><td>"올라갔어요" 말뿐</td><td class="us"><b>순위 조회 도구(키워드마스터)</b>로 전후 데이터 비교</td></tr>
-          <tr><td class="lbl">보고</td><td>없거나 형식적</td><td class="us"><b>월간 리포트</b> — 한 일 · 증빙 링크 · 순위 변화</td></tr>
-          <tr><td class="lbl">상품 구성</td><td>묶음 패키지 강요</td><td class="us">진단 후 <b>매장에 필요한 것만 골라서</b></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="pf3">
-      <div class="inf rv"><img src="/assets/ls-rewardspace.webp" alt="리워드스페이스" loading="lazy"><div class="bd"><div class="domain">rewardspace.kr</div><h4>리워드스페이스</h4><p>저장 · 알림 · 길찾기를 만드는 리워드 플랫폼. 저희가 직접 운영합니다.</p></div></div>
-      <div class="inf rv"><img src="/assets/ls-reviewspace.webp" alt="리뷰스페이스" loading="lazy"><div class="bd"><div class="domain">review-space.kr</div><h4>리뷰스페이스</h4><p>기자단 섭외 · 배정 · 정산까지 직접 관리하는 리뷰 플랫폼.</p></div></div>
-      <div class="inf rv"><img src="/assets/ls-keywordmaster.webp" alt="키워드마스터" loading="lazy"><div class="bd"><div class="domain">keywordmaster.kr</div><h4>키워드 마스터</h4><p>내 가게 순위를 데이터로 추적하는 순위 조회 도구.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="cine">
-<div class="cine-panel light" style="background-image:url('/assets/cine-3b.webp')">
-    <div class="cp-inner rv">
-      <span class="cp-tag">그리고, 알게 된 것</span>
-      <h3>문제는 음식이 아니라 <br><span class="grad">발견</span>이었습니다.</h3>
-      <p>발견은 정성만으로 만들어지지 않습니다. <br>하지만, 만들 수는 있습니다. 그게 저희가 하는 일입니다.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══ 06 패키지 ══ -->
-<section class="products" id="packages">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker">05 · 패키지</div>
-      <h2>부족한 것에 맞춰 고르세요. <br>월 22만원부터 시작합니다.</h2>
-      <p>위 진단 결과에 따라 맞는 패키지를 추천드립니다. <br>필요 없는 건 억지로 안 넣습니다.</p>
-    </div>
-    <div class="pkg-grid">
-      <div class="pkg rv" id="pkgA">
-        <div class="pkg-name"><em>1</em>플레이스 관리</div>
-        <div class="pkg-price">월 22만원</div>
-        <div class="pkg-for">리뷰는 있는데 순위만 밀리는 가게</div>
-        <ul>
-          <li><b>SEO 점검 · 세팅</b> 1회</li>
-          <li><b>트래픽</b> 월 1,500유입</li>
-          <li><b>저장</b> 300건 캠페인</li>
-          <li><b>블로그 리뷰</b> 20건 · <b>클립 리뷰</b> 10건</li>
-        </ul>
-      </div>
-      <div class="pkg pop rv" id="pkgB">
-        <div class="pkg-tag">가장 많이 선택</div>
-        <div class="pkg-name"><em>2</em>네이버 풀케어</div>
-        <div class="pkg-price">월 49만원</div>
-        <div class="pkg-for">순위도 리뷰도 같이 채워야 하는 가게</div>
-        <ul>
-          <li>플레이스 관리 전체 포함</li>
-          <li><b>최적화 기자단</b> 월 4건 (원고 포함)</li>
-          <li><b>맘카페 바이럴</b> 월 4건 (댓글 포함)</li>
-        </ul>
-      </div>
-      <div class="pkg rv" id="pkgC">
-        <div class="pkg-name"><em>3</em>올인원 베스트</div>
-        <div class="pkg-price">월 79만원</div>
-        <div class="pkg-for">네이버 밖까지, 동네 전 채널을 잡을 가게</div>
-        <ul>
-          <li>네이버 풀케어 전체 포함</li>
-          <li><b>카카오맵 10 · 티맵 10</b> 리뷰</li>
-          <li><b>당근</b> 후기 10 · 찜 100 · 동네생활 2</li>
-        </ul>
-      </div>
-      <div class="pkg rv" id="pkgR">
-        <div class="pkg-name"><em>R</em>올인원 리뷰</div>
-        <div class="pkg-price">월 55만원</div>
-        <div class="pkg-for">리워드 없이 후기만 전 채널로</div>
-        <ul>
-          <li>기자단 4 · 블로그 20 · 맘카페 4</li>
-          <li>카카오맵 10 · 티맵 10 · 당근 후기 10</li>
-          <li>당근 동네생활 2 · SEO 세팅</li>
-        </ul>
-      </div>
-    </div>
-    <div class="pkg-addon rv">
-      <b>+ 애드온 · 샤오홍슈 체험단 월 39만원 (5팀)</b>
-      <span>서울 · 부산 · 제주 매장 한정 — 중국 · 대만 · 홍콩 손님이 보는 샤오홍슈에 가게를 올립니다. 어느 패키지에나 추가 가능합니다.</span>
-    </div>
-    <p class="prod-note rv">전 패키지 VAT 별도 · <b>장기 계약 강요 없이, 첫 달 리포트를 보고 연장을 결정</b>하시면 됩니다. <br>키워드 경쟁이 심한 상권은 수량 조정이 필요할 수 있어 진단 때 확정해드립니다.</p>
-  </div>
-</section>
-
-<!-- ══ 07 문의 ══ -->
-<section class="faq-mini">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker">06 · 자주 묻는 질문</div>
-      <h2>궁금하신 것부터</h2>
-    </div>
-    <div class="faq-list rv">
-      <details class="faq-item">
-        <summary>효과는 얼마나 걸리나요?</summary>
-        <div class="a">키워드 경쟁과 매장 상태에 따라 다르지만, 보통 <b>2주차부터 변화가 시작되고 4주차 리포트에서 순위 변화를 확인</b>하실 수 있습니다. 경쟁이 치열한 키워드는 진단 때 솔직하게 기간을 말씀드립니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary>블로그 글은 어떻게 올라가나요?</summary>
-        <div class="a">사장님이 보내주신 <b>사진과 가게 정보</b>로 저희가 원고를 쓰고 계정에 발행합니다. <b>최적화 기자단</b>은 네이버에서 잘 관리된 것으로 평가받는 <b>최적화 등급 계정</b>에 올라가서 상위 노출 확률이 높고, <b>블로그 리뷰</b>는 일반 등급 계정에 올라가 검색 결과를 채웁니다. 두 가지를 같이 써야 검색 상단과 검색 결과가 함께 채워집니다. 게시된 글 링크는 전부 증빙으로 드리고, 광고성 표기도 함께 넣어 발행합니다.</div>
-      </details>
-      <details class="faq-item">
-        <summary>비용은 어느 정도인가요?</summary>
-        <div class="a">매장 상태와 필요한 것에 따라 달라 <b>무료 진단 후 맞춤 견적</b>으로 안내드립니다. 리워드와 리뷰를 직접 만드는 회사라, 같은 예산이면 더 많이 해드릴 수 있습니다. 장기 계약을 강요하지 않고, <b>첫 달 리포트를 보고 연장을 결정</b>하시면 됩니다.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="form-shell">
-    <div class="form-head rv">
-      <h2>내 가게, 지금 <span class="grad">몇 위</span>인가요?</h2>
-      <p>가게 이름만 알려주시면 현재 순위와 상태를 무료로 진단해드립니다. <br>영업일 기준 24시간 내 연락드립니다.</p>
-    </div>
-    <form class="lead" id="leadForm">
-      <div class="field"><label>성함 *</label><input type="text" name="name" required="" maxlength="30" placeholder="홍길동"></div>
-      <div class="field"><label>연락처 *</label><input type="tel" name="phone" required="" placeholder="010-0000-0000"></div>
-      <div class="field"><label>가게 이름 · 지역 *</label><input type="text" name="store" required="" maxlength="60" placeholder="예: 화로상회 강남점"></div>
-      <div class="field"><label>업종</label>
-        <select name="cat"><option value="">선택해주세요</option><option>맛집 · 식당</option><option>카페 · 디저트</option><option>술집 · 포차</option><option>기타</option></select>
-      </div>
-      <div class="field"><label>지금 가장 큰 고민</label><textarea name="message" rows="3" maxlength="2000" placeholder="예: 검색하면 2페이지에 나와요. 리뷰도 잘 안 쌓입니다."></textarea></div>
-      <div class="hp"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
-      <label class="agree"><input type="checkbox" required=""> <span>개인정보 수집·이용에 동의합니다. (<a href="/privacy" target="_blank">내용 보기</a>) 수집 항목: 성함, 연락처, 문의 내용 / 목적: 상담 진행</span></label>
-      <button type="submit" class="cta btn-submit" id="submitBtn">무료 순위 진단 신청하기 →</button>
-    </form>
-    <div class="done" id="doneBox">
-      <div class="big">✦</div>
-      <h3>신청이 완료되었습니다</h3>
-      <p>영업일 기준 24시간 안에 담당자가 직접 연락드립니다.</p>
-    </div>
-  </div>
-</section>
-
-<div class="stickybar" id="stickyBar">
-  <div class="sb-txt"><b>내 가게, 지금 몇 위인가요?</b> 30초면 확인됩니다</div>
-  <a href="#contact" class="sb-btn">무료 진단 신청 →</a>
-</div>
-
 <footer>
   <div class="col">
     <b>주식회사 피크마케팅</b><br>
@@ -821,7 +214,6 @@ footer a { color:var(--dim); font-size:13px; }
 </footer>
 
 <script>
-// ── 오로라 (그린) ──
 (function(){
   var cv = document.getElementById('aurora'), ctx = cv.getContext('2d');
   var off = document.createElement('canvas'), octx = off.getContext('2d');
@@ -874,67 +266,21 @@ footer a { color:var(--dim); font-size:13px; }
   requestAnimationFrame(frame);
 })();
 
-// ── 커서 ──
 (function(){
   if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
   var c = document.getElementById('cursor'), x=0,y=0,tx=0,ty=0;
   document.addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
   (function loop(){ x+=(tx-x)*.2; y+=(ty-y)*.2; c.style.left=x+'px'; c.style.top=y+'px'; requestAnimationFrame(loop); })();
-  document.querySelectorAll('a, button, .pd, .inf, .pcard').forEach(function(el){
+  document.querySelectorAll('a, button').forEach(function(el){
     el.addEventListener('mouseenter', function(){ c.classList.add('big'); });
     el.addEventListener('mouseleave', function(){ c.classList.remove('big'); });
   });
 })();
 
-// ── 리빌 ──
-(function(){
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, {threshold:.1});
-  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-})();
-
-// ── nav ──
 window.addEventListener('scroll', function(){
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 40);
 });
 
-// ── 하단 고정 CTA 바 ──
-(function(){
-  var bar = document.getElementById('stickyBar');
-  var contact = document.getElementById('contact');
-  var nearContact = false;
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){ nearContact = e.isIntersecting; update(); });
-  }, {threshold:.05});
-  io.observe(contact);
-  function update(){
-    var past = window.scrollY > window.innerHeight * 0.9;
-    bar.classList.toggle('show', past && !nearContact);
-  }
-  window.addEventListener('scroll', update, {passive:true});
-  update();
-})();
-
-// ── 미션 완료 애니메이션 ──
-(function(){
-  var items = document.querySelectorAll('#missionList .mp-item');
-  var done = document.getElementById('mDone');
-  if (!items.length) return;
-  var i = 0;
-  setInterval(function(){
-    if (i < items.length) {
-      items[i].classList.add('done');
-      i++;
-      done.textContent = i;
-    } else {
-      items.forEach(function(el){ el.classList.remove('done'); });
-      i = 0; done.textContent = 0;
-    }
-  }, 1300);
-})();
-
-// ── UTM 보존 ──
 (function(){
   var p = new URLSearchParams(location.search);
   ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){
@@ -943,7 +289,6 @@ window.addEventListener('scroll', function(){
   if (document.referrer && !sessionStorage.getItem('_ref')) sessionStorage.setItem('_ref', document.referrer);
 })();
 
-// ── 랜딩 이벤트 수집 ──
 (function(){
   var sid = sessionStorage.getItem('hp_sid');
   if (!sid) { sid = Math.random().toString(36).slice(2) + Date.now().toString(36); sessionStorage.setItem('hp_sid', sid); }
@@ -963,7 +308,6 @@ window.addEventListener('scroll', function(){
   hpTrack('view');
 })();
 
-// ── 공통 리드 접수 함수 ──
 function submitLead(body, onSuccess, onError){
   return fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)})
     .then(function(res){ return res.json().then(function(data){ return {res:res, data:data}; }); })
@@ -990,7 +334,6 @@ function buildLeadBody(f, extra){
   }, extra||{});
 }
 
-// ── 히어로 접수 폼 ──
 document.getElementById('heroLeadForm').addEventListener('submit', function(e){
   e.preventDefault();
   var f = e.target;
@@ -1005,25 +348,7 @@ document.getElementById('heroLeadForm').addEventListener('submit', function(e){
     if (window.fbq) fbq('track', 'Lead');
   }, function(e2){
     err.textContent = e2.message || '오류가 발생했습니다. 잠시 후 다시 시도해주세요.';
-    btn.disabled = false; btn.textContent = '무료 진단 신청하기 →';
-  });
-});
-
-// ── 하단 접수 폼 ──
-document.getElementById('leadForm').addEventListener('submit', function(e){
-  e.preventDefault();
-  var btn = document.getElementById('submitBtn');
-  btn.disabled = true; btn.textContent = '접수 중...';
-  var f = e.target;
-  submitLead(buildLeadBody(f), function(){
-    f.style.display = 'none';
-    document.getElementById('doneBox').style.display = 'block';
-    document.getElementById('doneBox').scrollIntoView({behavior:'smooth', block:'center'});
-    if (window.hpTrack) hpTrack('lead');
-    if (window.fbq) fbq('track', 'Lead');
-  }, function(err){
-    alert(err.message || '오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
-    btn.disabled = false; btn.textContent = '무료 순위 진단 신청하기 →';
+    btn.disabled = false; btn.textContent = '무료 상담 신청하기 →';
   });
 });
 </script>
