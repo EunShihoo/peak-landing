@@ -277,7 +277,7 @@ footer a { color:var(--dim); font-size:13px; }
   if (!matchMedia('(hover:hover) and (pointer:fine)').matches) return;
   var c = document.getElementById('cursor'), x=0,y=0,tx=0,ty=0;
   document.addEventListener('mousemove', function(e){ tx=e.clientX; ty=e.clientY; });
-  (function loop(){ x+=(tx-x)*.2; y+=(ty-y)*.2; c.style.left=x+'px'; c.style.top=y+'px'; requestAnimationFrame(loop); })();
+  (function loop(){ x+=(tx-x)*.4; y+=(ty-y)*.2; c.style.left=x+'px'; c.style.top=y+'px'; requestAnimationFrame(loop); })();
   document.querySelectorAll('a, button').forEach(function(el){
     el.addEventListener('mouseenter', function(){ c.classList.add('big'); });
     el.addEventListener('mouseleave', function(){ c.classList.remove('big'); });
