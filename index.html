@@ -132,7 +132,12 @@ footer a { color:var(--dim); font-size:13px; }
   .marquee { padding:16px 0; }
 }
 </style>
-<style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swa"></head>
+<style>undefined</style><link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="use-credentials"><link rel="preconnect" href="https://fonts.gstatic.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swa">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("shovgeNl09T5ActiM");
+</script>
+</head>
 <body>
 
 <div class="cursor" id="cursor"></div>
@@ -310,32 +315,6 @@ window.addEventListener('scroll', function(){
   hpTrack('view');
 })();
 
-function submitLead(body, onSuccess, onError){
-  return fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(body)})
-    .then(function(res){ return res.json().then(function(data){ return {res:res, data:data}; }); })
-    .then(function(r){
-      if (!r.res.ok) throw new Error(r.data.detail || '접수에 실패했습니다.');
-      onSuccess();
-    })
-    .catch(function(err){ onError(err); });
-}
-
-function buildLeadBody(f, extra){
-  var bt = [f.cat ? f.cat.value : '', f.store.value].filter(Boolean).join(' | ');
-  return Object.assign({
-    source: 'seller',
-    name: f.name.value, phone: f.phone.value,
-    biz_type: bt, message: f.message.value,
-    website: f.website.value,
-    utm_source: sessionStorage.getItem('utm_source')||'',
-    utm_medium: sessionStorage.getItem('utm_medium')||'',
-    utm_campaign: sessionStorage.getItem('utm_campaign')||'',
-    utm_content: sessionStorage.getItem('utm_content')||'',
-    utm_term: sessionStorage.getItem('utm_term')||'',
-    referrer: sessionStorage.getItem('_ref')||''
-  }, extra||{});
-}
-
 document.getElementById('heroLeadForm').addEventListener('submit', function(e){
   e.preventDefault();
   var f = e.target;
@@ -343,17 +322,22 @@ document.getElementById('heroLeadForm').addEventListener('submit', function(e){
   var err = document.getElementById('hfErr');
   err.textContent = '';
   btn.disabled = true; btn.textContent = '접수 중...';
-  submitLead(buildLeadBody(f), function(){
+
+  emailjs.send('service_jxc3hbn', 'template_co5ya8q', {
+    name: f.name.value,
+    phone: f.phone.value,
+    cat: f.cat.value,
+    store: f.store.value,
+    message: f.message.value
+  }).then(function(){
     document.getElementById('hfFormState').style.display = 'none';
     document.getElementById('hfDone').style.display = 'block';
     if (window.hpTrack) hpTrack('lead_hero');
     if (window.fbq) fbq('track', 'Lead');
-  }, function(e2){
-    err.textContent = e2.message || '오류가 발생했습니다. 잠시 후 다시 시도해주세요.';
+  }, function(error){
+    err.textContent = '오류가 발생했습니다. 잠시 후 다시 시도해주세요.';
     btn.disabled = false; btn.textContent = '무료 상담 신청하기 →';
   });
 });
 </script>
-
-
 </body></html>
